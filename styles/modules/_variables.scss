@@ -1,0 +1,28 @@
+$primary:  #625782;
+$primary-dark:  #242130;
+$primary-light:  #B1ACC1;
+
+$accent: #81A2AC;
+$accent-dark: #607981 ;
+$accent-light: #add8e6;
+
+$warn: #D92946;
+
+$font-color: #242424;   
+$font-color-light: #FFF;
+
+$disabled: #8E8F8F;
+
+$font-size-small: 12px;
+$font-size-default: 14px;
+$font-size-large: 16px;
+
+$gap-default: 16px;
+$gap-xs: calc(#{$gap-default} / 4);
+$gap-small: calc(#{$gap-default} / 2);
+$gap-large: calc(#{$gap-default} * 2);
+$gap-xl: calc(#{$gap-default} * 4);
+
+$default-border: 1px solid #424445;
+
+$default-transition: .3s;

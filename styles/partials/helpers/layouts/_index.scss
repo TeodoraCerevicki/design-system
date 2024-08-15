@@ -1,0 +1,83 @@
+@use '../../../modules/variables' as vars;
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: {
+        right: vars.$gap-large;
+        left: vars.$gap-large;
+    };
+
+    @media screen and (min-width: 768px) {
+        width: 668px;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 1120px;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 1280px;
+    }
+}
+
+.display-flex {
+    display: flex;
+}
+
+.space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.align-center-fully {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hide {
+    display: none!important;
+}
+
+.show-on-mobile {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.show-on-tablet {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.hide-on-desktop {
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.show-on-desktop {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+        display: block;
+    }
+}

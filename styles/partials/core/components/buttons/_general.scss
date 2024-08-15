@@ -1,0 +1,88 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/layouts/alignments/items';
+
+
+%button {
+	@include fonts.main-medium-font();
+	padding: vars.$gap-default 22px;
+	transition: .2s;
+	border: 1px solid transparent;
+	line-height: 1.1;
+	text-transform: capitalize;
+
+	&:disabled, &.disabled {
+		background-color: vars.$disabled!important;
+		cursor: not-allowed;
+		color: vars.$font-color-light;
+	}
+
+	&.warn {
+		background-color: vars.$warn!important;
+		border-color: vars.$warn!important;
+		color: vars.$font-color-light!important;
+	}
+}
+
+.button-primary {
+	--background-color: #{vars.$primary};
+	--background-color-light: #{vars.$primary-light};
+	--border-color: #{vars.$primary};
+	--color: #{vars.$primary};
+}
+
+.button-accent {
+	--background-color: #{vars.$accent};
+	--background-color-light: #{vars.$accent-light};
+	--border-color: #{vars.$accent};
+	--color: #{vars.$accent};
+}
+
+.button-basic, .button-stroked, .button-flat, .button-fab {
+	@extend %button;
+}
+
+.button-basic, .button-stroked {
+	color: var(--color);
+}
+
+.button-stroked, .button-flat, .button-fab {
+	&:hover {
+		background-color: var(--background-color-light);
+	}
+}
+
+.button-basic {
+	&:hover {
+		border-color: var(--border-color);
+	}
+}
+
+.button-stroked {
+	border: 1px solid var(--border-color);
+}
+
+.button-flat, .button-fab {
+	background-color: var(--background-color);
+	color: vars.$font-color-light;
+}
+
+.button-fab {
+	@include items.align-center();
+
+	&_text {
+		display: block;
+		margin-left: vars.$gap-small;
+		font-size: 16px;
+	}
+
+	&.-responsive {
+		.button-fab_text {
+			display: none;
+
+			@media screen and (min-width: 1024px) {
+				display: block;
+			}
+		}
+	}
+}
