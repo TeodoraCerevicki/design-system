@@ -26,7 +26,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	gap: vars.$gap-default;
-	justify-items: center; 
+	justify-items: left; 
 	margin-top: vars.$gap-default;
 
 	.box {

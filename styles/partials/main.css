@@ -321,7 +321,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 16px;
-  justify-items: center;
+  justify-items: left;
   margin-top: 16px;
 }
 .list .box {
